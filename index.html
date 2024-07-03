@@ -107,6 +107,50 @@
         .cursor-pointer {
             cursor: pointer;
         }
+
+        @media (max-width:767px) {
+            .welcome-banner {
+                background-color: #2ecc71;
+                color: white;
+                padding: 50px 0;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .welcome-banner h1 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .welcome-banner p {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+
+        .pagination a.active {
+            background-color: #2980b9;
+            color: white;
+            border: 1px solid #2980b9;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
     </style>
 </head>
 
@@ -313,7 +357,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="card rounded-0 border-top-0 border-end-0 border-start-0">
                     <div class="card-body">
                         <p class="card-title">Sr Program Manager, Product and Technology</p>
@@ -439,6 +483,17 @@
                             RBC posted 2 days ago
                         </p>
                     </div>
+                </div>
+
+                <div class="pagination mt-3">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -555,8 +610,36 @@
         </div>
     </div>
 
-    <div class="container">
-
+    <div class="container d-flex justify-content-center mt-3">
+        <ul class="ul-remove-bullets text-muted mt-2">
+            <li class="ul-display-inline cursor-pointer">
+                <p>Privacy</p>
+            </li>
+            <li class="ul-display-inline">
+                <p>|</p>
+            </li>
+            <li class="ul-display-inline cursor-pointer">
+                <p>About</p>
+            </li>
+            <li class="ul-display-inline">
+                <p>|</p>
+            </li>
+            <li class="ul-display-inline cursor-pointer">
+                <p>Contact</p>
+            </li>
+            <li class="ul-display-inline">
+                <p>|</p>
+            </li>
+            <li class="ul-display-inline cursor-pointer">
+                <p>LinkedIn</p>
+            </li>
+            <li class="ul-display-inline">
+                <p>|</p>
+            </li>
+            <li class="ul-display-inline cursor-pointer">
+                <p>Facebook</p>
+            </li>
+        </ul>
     </div>
 
 
