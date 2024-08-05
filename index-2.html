@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container-fluid pt-2 pb-2 bg-dark">
+    <div class="container pt-2 pb-2">
         <div class="row align-items-center">
             <div class="col-5">
                 <a class="navbar-brand" href="#">
@@ -28,10 +28,10 @@
             </div>
             <div class="col-7">
                 <div class="d-flex justify-content-end">
-                    <a href="#" class="icon-link icon-link-hover text-decoration-none text-white">
+                    <a href="#" class="icon-link icon-link-hover text-decoration-none text-dark">
                         Job search
                     </a>
-                    <a href="#" class="ms-3 icon-link-hover text-decoration-none text-white d-flex align-items-center">
+                    <a href="#" class="ms-3 icon-link-hover text-decoration-none text-dark d-flex align-items-center">
                         Sign In
                     </a>
                 </div>
@@ -41,18 +41,19 @@
 
 
     <div class="welcome-banner">
-        <div class="container">
-            <h1>Welcome to Professional Search</h1>
-            <p>Find your dream job with us</p>
-            <p>Powered by AI for smarter job matches</p>
-        </div>
+        <h1>Welcome to Professional Search</h1>
+        <p>Find your dream job with us</p>
+        <p>Powered by AI for smarter job matches</p>
     </div>
 
     <div class="container">
-        <div class="row g-3">
+        <div class="row">
             <div class="col-md-5">
-                <input class="form-control form-control-lg rounded-0 x-input border-0" type="search"
-                    placeholder="Search jobs using keywords">
+                <div class="form-floating">
+                    <input type="search" class="form-control x-input" id="floatingInputName"
+                        placeholder="Search jobs using keywords">
+                    <label for="floatingInputName">Search jobs using keywords</label>
+                </div>
                 <ul class="ul-remove-bullets text-muted mt-2 small">
                     <li class="ul-display-inline">
                         <p>Ex:</p>
@@ -68,12 +69,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-5">
-                <input class="form-control form-control-lg rounded-0 x-input border-0" type="text"
-                    placeholder="Location search">
+            <div class="col-md-5 mb-3">
+                <div class="form-floating">
+                    <input type="search" class="form-control x-input" id="floatingInputLocation" placeholder="Location">
+                    <label for="floatingInputLocation">Location</label>
+                </div>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-lg btn-brand rounded-0 w-100">Search</button>
+                <button class="btn btn-lg btn-brand adjust-height rounded-0 w-100">Search</button>
             </div>
         </div>
     </div>
@@ -317,7 +320,6 @@
                     <a href="#">3</a>
                     <a href="#">4</a>
                     <a href="#">5</a>
-                    <a href="#">6</a>
                     <a href="#">&raquo;</a>
                 </div>
             </div>

@@ -24,10 +24,6 @@ body {
     box-shadow: 0 0 5px #3498db;
 }
 
-.adjust-height{
-    height: calc(3.5rem + 2px); /* Adjust the value to match input height */
-}
-
 /* Inline Elements */
 .inline-icon {
     display: inline-flex;
@@ -180,11 +176,11 @@ body {
     border-collapse: collapse;
     font-size: 0.9em;
     min-width: 100%;
-    border: 1px solid #ddd;
 }
 
 .styled-table thead tr {
-    color: black;
+    background-color: #3498db;
+    color: #ffffff;
     text-align: left;
     text-transform: uppercase;
 }
@@ -204,6 +200,15 @@ body {
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #3498db;
+}
+
+/* Animation Styles */
+.zoom-animation {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-animation:hover {
+    transform: scale(1.05);
 }
 
 /* Navigation Styles */
@@ -234,17 +239,4 @@ body {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-.active-side-menu{
-    background-color: #3498db !important;
-    color: white !important;
-}
-
-.cursor-pointer{
-    cursor: pointer !important;
-}
-
-.list-group-item:hover{
-    background-color: #dee3e6 !important;
 }
