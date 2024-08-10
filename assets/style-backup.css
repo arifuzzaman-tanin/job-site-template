@@ -61,18 +61,18 @@ body {
 }
 
 /* Button Styles */
-.btn-apply,
-.btn-apply:hover {
+.btn-primary,
+.btn-primary:hover {
     background-color: #2ecc71;
     color: white;
 }
 
-.btn-brand {
+.btn-primary {
     background-color: #3498db;
     color: white;
 }
 
-.btn-brand:hover {
+.btn-primary:hover {
     background-color: #2980b9;
 }
 

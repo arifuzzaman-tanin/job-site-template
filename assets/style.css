@@ -24,14 +24,23 @@ body {
     box-shadow: 0 0 5px #3498db;
 }
 
-.adjust-height{
-    height: calc(3.5rem + 2px); /* Adjust the value to match input height */
+.adjust-height {
+    height: calc(3.5rem + 2px);
+    /* Adjust the value to match input height */
 }
 
 /* Inline Elements */
 .inline-icon {
     display: inline-flex;
     vertical-align: top;
+}
+
+.btn-inline {
+    display: flex;
+    align-items: center;
+}
+.btn-inline .material-symbols-outlined {
+    margin-left: 0.5rem; /* Adjust spacing between text and icon */
 }
 
 /* List Styles */
@@ -64,22 +73,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Button Styles */
-.btn-apply,
-.btn-apply:hover {
-    background-color: #2ecc71;
-    color: white;
-}
-
-.btn-brand {
-    background-color: #3498db;
-    color: white;
-}
-
-.btn-brand:hover {
-    background-color: #2980b9;
-}
-
 /* Card Styles */
 .card-title {
     color: #3498db;
@@ -105,7 +98,8 @@ body {
     text-decoration: none;
     transition: background-color 0.3s;
     border: 1px solid #ddd;
-    margin: 0 2px; /* Consolidated style */
+    margin: 0 2px;
+    /* Consolidated style */
 }
 
 .pagination a.active {
@@ -136,7 +130,6 @@ body {
 .footer {
     margin-top: auto;
     width: 100%;
-    background-color: #f8f9fa;
     padding: 10px 0;
 }
 
@@ -144,12 +137,16 @@ body {
     height: 30px;
 }
 
+.brand-logo-sm{
+    display: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .brand-logo {
         height: 20px;
     }
-    
+
     .card-title {
         font-size: 20px;
     }
@@ -172,6 +169,22 @@ body {
 
     .profile-icon {
         margin-left: 25px;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .top-navbar{
+        display: none;
+    }
+
+    .welcome-banner{
+        display: none;
+    }
+
+    .brand-logo-sm{
+        display: block;
     }
 }
 
@@ -209,13 +222,23 @@ body {
 /* Navigation Styles */
 .nav-underline .nav-link {
     border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
     padding: 1rem 1.5rem;
+    border-radius: 5px;
+    color: #333;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .nav-underline .nav-link:hover,
 .nav-underline .nav-link.active {
     border-bottom-color: #3498db;
+    background-color: #f5f5f5;
+    color: #3498db;
+}
+
+.navbar-nav .dropdown-toggle::after {
+    display: none;
 }
 
 .profile-icon {
@@ -225,9 +248,19 @@ body {
     object-fit: cover;
 }
 
-.navbar-nav .dropdown-toggle::after {
-    display: none;
+/* Centering the nav items */
+.navbar-nav.center-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
+
+/* Making the navbar-brand logo larger */
+.navbar-brand .brand-logo {
+    max-height: 50px;
+}
+
 
 .job-title-cyan-blue {
     color: #3498db;
@@ -236,15 +269,140 @@ body {
     margin-bottom: 10px;
 }
 
-.active-side-menu{
+.active-side-menu {
     background-color: #3498db !important;
     color: white !important;
 }
 
-.cursor-pointer{
+.active-side-menu small {
+    color: white !important;
+}
+
+.cursor-pointer {
     cursor: pointer !important;
 }
 
-.list-group-item:hover{
+.list-group-item:hover {
     background-color: #dee3e6 !important;
+}
+
+.btn-green-cyan, .btn-green-cyan:hover{
+    background-color: #2ecc71 !important;
+    border-color: #2ecc71 !important;
+    color: white;
+}
+
+/* custom.css */
+
+/* Override primary color for buttons */
+.btn-primary {
+    background-color: #3498db !important;
+    border-color: #3498db !important;
+}
+
+/* Override primary color for link colors */
+.text-primary {
+    color: #3498db !important;
+}
+
+/* Override primary color for background colors */
+.bg-primary {
+    background-color: #3498db !important;
+}
+
+/* Override primary color for border colors */
+.border-primary {
+    border-color: #3498db !important;
+}
+
+/* Override primary color for form controls */
+.form-control:focus {
+    border-color: #3498db !important;
+    box-shadow: 0 0 0 .2rem rgba(52, 152, 219, .25) !important;
+}
+
+
+/* bottom nevigation */
+.bottom-navbar {
+    background-color: #2ecc71;
+    /* Darker blue border */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for depth */
+}
+
+.bottom-navbar .navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+    /* Evenly space items */
+}
+
+.bottom-navbar .nav-link {
+    color: #ffffff;
+    /* White text color */
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+.bottom-navbar .nav-link.active {
+    background-color: #0056b3;
+    /* Darker blue background for active link */
+    color: #ffffff;
+    /* White text color for active link */
+}
+
+.bottom-navbar .nav-link:hover {
+    background-color: #0056b3;
+    /* Darker blue background on hover */
+    color: #ffffff;
+    /* White text color on hover */
+}
+
+.bottom-navbar .nav-link span {
+    font-size: 24px;
+    display: block;
+}
+
+.bottom-navbar .nav-link span.d-none {
+    display: none;
+}
+
+/* top navigation */
+.top-navbar {
+    background-color: #ffffff;
+    padding: 5px 0;
+    /* Reduce height */
+}
+
+.top-navbar .navbar-brand img {
+    height: 30px;
+    /* Adjust logo size if needed */
+}
+
+.top-navbar .nav-link {
+    color: #495057;
+    font-weight: bold;
+    /* Make icons bold */
+    padding: 10px 15px;
+    /* Adjust padding */
+    text-align: center;
+}
+
+.top-navbar .nav-link span {
+    font-size: 24px;
+    /* Icon size */
+}
+
+.top-navbar .nav-link span.d-none {
+    display: none;
+    /* Hide menu names */
+}
+
+.top-navbar .nav-item {
+    flex-grow: 1;
+    /* Make the icons evenly spaced */
 }

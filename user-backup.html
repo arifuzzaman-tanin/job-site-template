@@ -67,47 +67,16 @@
     </nav>
 
     <div class="container-fluid py-3">
-        <div class="row g-3">
-            <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-3 mb-3">
                 <div class="card border-0">
                     <div class="card-body">
                         <p class="fw-bold fs-5 mb-1">User Management</p>
                         <p class="text-muted small">Overview and insights on all registered users.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card ">
-                    <div class="card-body text-center">
-                        <p class="text-muted small text-uppercase">Total Users</p>
-                        <p class="fw-bold fs-5 mb-1">630</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card ">
-                    <div class="card-body text-center">
-                        <p class="text-muted small text-uppercase">Active User</p>
-                        <p class="fw-bold fs-5 mb-1">580</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card ">
-                    <div class="card-body text-center">
-                        <p class="text-muted small text-uppercase">Action Required</p>
-                        <p class="fw-bold fs-5 mb-1">10</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <ul class="list-group cursor-pointer">
-                    <li class="list-group-item">
+                <ul class="list-group">
+                    <li class="list-group-item cursor-pointer">
                         <div class="fw-bold">
                             <span class="material-symbols-outlined inline-icon">
                                 add
@@ -149,23 +118,33 @@
             <div class="col-md-9">
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <input class="form-control rounded-0 x-input border-0" type="text"
-                        placeholder="Search by keywords">
+                        <div class="form-floating">
+                            <input type="search" class="form-control x-input" id="floatingInputEmail"
+                                placeholder="Search by keywords">
+                            <label for="floatingInputEmail">Search by name / email</label>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <select na class="form-control rounded-0 x-input border-0">
-                            <option value="">All Roles</option>
-                            <option value="Admin">Admin</option>
-                            <option value="User">User</option>
-                            <option value="Guest">Guest</option>
-                        </select>
+                        <div class="form-floating">
+                            <select class="form-select x-input" id="select-role"
+                                aria-label="Floating label select example">
+                                <option selected>--</option>
+                                <option value="Admin">Admin</option>
+                                <option value="User">User</option>
+                            </select>
+                            <label for="select-role">Select Role</label>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <select class="form-control rounded-0 x-input border-0">
-                            <option value="">All Statuses</option>
-                            <option value="Active">Active</option>
-                            <option value="Inactive">Inactive</option>
-                        </select>
+                        <div class="form-floating">
+                            <select class="form-select x-input" id="select-status"
+                                aria-label="Floating label select example">
+                                <option selected>--</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <label for="select-status">Select Status</label>
+                        </div>
                     </div>
                 </div>
                 <div class="table-responsive mt-3">

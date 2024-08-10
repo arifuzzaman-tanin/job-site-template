@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <style>
         textarea {
-            height: 300px;
+            height: 400px !important;
             resize: none;
             width: 100%;
             box-sizing: border-box;
@@ -29,86 +29,83 @@
 </head>
 
 <body>
-    <div class="container-fluid pt-2 pb-2 header-small-device">
-        <div class="row">
-            <div class="col-6">
+    <div class="container pt-2 pb-2">
+        <div class="row align-items-center">
+            <div class="col-5">
                 <a class="navbar-brand" href="#">
                     <img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo">
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-7">
                 <div class="d-flex justify-content-end">
-                    <button class="btn btn-sm rounded-0 fw-bold icon-link icon-link-hover btn-sm-device" type="button">
+                    <a href="#" class="icon-link icon-link-hover text-decoration-none text-dark">
                         Job search
-                    </button>
-                    <button class="btn btn-sm rounded-0 fw-bold icon-link icon-link-hover btn-sm-device" type="button">
-                        <span class="material-symbols-outlined fw-bold">
-                            login
-                        </span>
+                    </a>
+                    <a href="#" class="ms-3 icon-link-hover text-decoration-none text-dark d-flex align-items-center">
                         Sign In
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="welcome-banner">
-        <div class="container">
-            <h2>Welcome to Resume Scan</h2>
-            <p>Powerful AI Tool to Optimize Your Resume</p>
-        </div>
+    <div class="container mt-5">
+        <h2 class="text-center">Resume Scan</h2>
+        <p class="text-center text-muted">Optimize your resume with our powerful AI tool</p>
     </div>
 
     <div class="container mt-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-6 mb-3">
-                        <p>Copy and paste your Resume</p>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                    <div class="col-sm-6">
-                        <p>Copy and paste the Job description</p>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                </div>
-
-                <button class="btn btn-apply rounded-0 float-end mt-3 fw-bold">
-                    Scan
-                    <span class="material-symbols-outlined inline-icon fw-bold">
-                        chevron_right
-                    </span>
-                </button>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaResume"></textarea>
+                    <label for="floatingTextareaResume">Copy and paste your Resume</label>
+                  </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaJobDescription"></textarea>
+                    <label for="floatingTextareaJobDescription">Copy and paste the Job description</label>
+                  </div>
             </div>
         </div>
+
+        <button class="btn btn-primary btn-lg rounded-0 float-end mt-3 fw-bold btn-inline">
+            Scan
+            <span class="material-symbols-outlined fw-bold">
+                chevron_right
+            </span>
+        </button>
     </div>
 
-    <div class="footer">
-        <div class="container d-flex justify-content-start mt-3">
-            <ul class="ul-remove-bullets text-muted mt-2 d-flex align-items-center">
-                <li class="ul-display-inline cursor-pointer">
-                    <p>Privacy</p>
-                </li>
-                <li class="ul-display-inline mx-2">
-                    <p>|</p>
-                </li>
-                <li class="ul-display-inline cursor-pointer">
-                    <p>About</p>
-                </li>
-                <li class="ul-display-inline mx-2">
-                    <p>|</p>
-                </li>
-                <li class="ul-display-inline cursor-pointer">
-                    <p>Contact</p>
-                </li>
-                <li class="ul-display-inline mx-2">
-                    <p>|</p>
-                </li>
-                <li class="ul-display-inline cursor-pointer">
-                    <p>LinkedIn</p>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="footer">
+            <div class="container d-flex justify-content-start mt-3">
+                <ul class="ul-remove-bullets text-muted mt-2 d-flex align-items-center">
+                    <li class="ul-display-inline cursor-pointer">
+                        <p>Privacy</p>
+                    </li>
+                    <li class="ul-display-inline mx-2">
+                        <p>|</p>
+                    </li>
+                    <li class="ul-display-inline cursor-pointer">
+                        <p>About</p>
+                    </li>
+                    <li class="ul-display-inline mx-2">
+                        <p>|</p>
+                    </li>
+                    <li class="ul-display-inline cursor-pointer">
+                        <p>Contact</p>
+                    </li>
+                    <li class="ul-display-inline mx-2">
+                        <p>|</p>
+                    </li>
+                    <li class="ul-display-inline cursor-pointer">
+                        <p>LinkedIn</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
