@@ -19,52 +19,39 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./assets/brand-logo-5.png" class="brand-logo"
-                    alt="Brand Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto nav-underline">
-                    <li class="nav-item">
-                        <a class="nav-link active zoom-animation" aria-current="page" href="#">User Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark zoom-animation" href="#">Admin Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark zoom-animation" href="#">Job Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark zoom-animation" href="#">Application Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark zoom-animation" href="#">Communication</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://avatars.githubusercontent.com/u/108493476?v=4" alt="Profile"
-                                class="profile-icon">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <div class="container-fluid py-2">
+        <div class="row">
+            <div class="col-6">
+                <a href="#"><img src="./assets/brand-logo-5.png" class="brand-logo"
+                        alt="Brand Logo"></a>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-apps float-end rounded-circle d-flex align-items-center justify-content-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Apps menu">
+                        <span class="material-symbols-outlined">apps</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">account_circle</span>User Management
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">work</span>Job Management
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">bar_chart_4_bars</span>Application Management
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
-    </nav>
+    </div>
 
     <div class="container-fluid py-3">
         <div class="row">
@@ -75,65 +62,44 @@
                         <p class="text-muted small">Overview and insights on all posted jobs.</p>
                     </div>
                 </div>
-                <ul class="list-group">
-                    <li class="list-group-item cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
+                  <ul class="list-group mt-3">
+                    <li class="list-group-item cursor-pointer d-flex justify-content-between align-items-start py-3">
+                        <div class="d-flex align-items-center">
+                            <span class="material-symbols-outlined inline-icon me-2">
                                 add
                             </span>
-                            Post New Job
+                            <div>
+                                <div class="fw-bold"> Post New Job</div>
+                                <small class="text-muted">Register a new user in the system</small>
+                            </div>
                         </div>
-                        Register a new user in the system
                     </li>
-                    <li class="list-group-item active-side-menu cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
+                    <li class="list-group-item active-side-menu cursor-pointer d-flex justify-content-between align-items-start py-3">
+                        <div class="d-flex align-items-center">
+                            <span class="material-symbols-outlined inline-icon me-2">
                                 list
                             </span>
-                            View All Jobs
+                            <div>
+                                <div class="fw-bold">View All Jobs</div>
+                                <small class="text-muted">See all registered users</small>
+                            </div>
                         </div>
-                        See all registered users
                     </li>
-                    <li class="list-group-item cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
+                    <li class="list-group-item cursor-pointer d-flex justify-content-between align-items-start py-3">
+                        <div class="d-flex align-items-center">
+                            <span class="material-symbols-outlined inline-icon me-2">
                                 draft
                             </span>
-                            Drifted Jobs
+                            <div>
+                                <div class="fw-bold">Drifted Jobs</div>
+                                <small class="text-muted">Jobs that have been marked as drifted</small>
+                            </div>
                         </div>
-                        Jobs that have been marked as drifted
                     </li>
-                  </ul>
+                </ul>
             </div>
 
             <div class="col-sm-9">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <div class="card ">
-                            <div class="card-body text-center">
-                                <p class="text-muted small text-uppercase">Active Jobs</p>
-                                <p class="fw-bold fs-5 mb-1">3</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card ">
-                            <div class="card-body text-center">
-                                <p class="text-muted small text-uppercase">Total Posted</p>
-                                <p class="fw-bold fs-5 mb-1">29</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card ">
-                            <div class="card-body text-center">
-                                <p class="text-muted small text-uppercase">Action Required</p>
-                                <p class="fw-bold fs-5 mb-1">10</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row g-3 py-3">
                     <div class="col-md-4">
                         <div class="form-floating">
@@ -149,6 +115,7 @@
                                 <option selected>--</option>
                                 <option value="Active">Active</option>
                                 <option value="Inactive">Inactive</option>
+                                <option value="Inactive">Drafted</option>
                             </select>
                             <label for="select-status">Select Active Status</label>
                         </div>

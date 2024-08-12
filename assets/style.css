@@ -125,22 +125,10 @@ body {
 /* Responsive Styles */
 @media (max-width: 992px) {
     .brand-logo {
-        height: 20px;
+        max-width: 250px;
     }
 
     .card-title {
-        font-size: 20px;
-    }
-
-    .welcome-banner {
-        padding: 50px 0;
-    }
-
-    .welcome-banner h1 {
-        font-size: 2rem;
-    }
-
-    .welcome-banner p {
         font-size: 20px;
     }
 
@@ -201,10 +189,8 @@ body {
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
     padding: 1rem 1.5rem;
-    border-radius: 5px;
     color: #333;
     font-weight: 500;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .nav-underline .nav-link:hover,
@@ -348,38 +334,10 @@ body {
     display: none;
 }
 
-/* top navigation */
-.top-navbar {
-    background-color: #ffffff;
-    padding: 5px 0;
-    /* Reduce height */
+/* Hide the default dropdown arrow */
+.dropdown-toggle-apps{
+    width: 40px; height: 40px; padding: 0;
 }
-
-.top-navbar .navbar-brand img {
-    height: 30px;
-    /* Adjust logo size if needed */
-}
-
-.top-navbar .nav-link {
-    color: #495057;
-    font-weight: bold;
-    /* Make icons bold */
-    padding: 10px 15px;
-    /* Adjust padding */
-    text-align: center;
-}
-
-.top-navbar .nav-link span {
-    font-size: 24px;
-    /* Icon size */
-}
-
-.top-navbar .nav-link span.d-none {
+.dropdown-toggle-apps::after {
     display: none;
-    /* Hide menu names */
-}
-
-.top-navbar .nav-item {
-    flex-grow: 1;
-    /* Make the icons evenly spaced */
 }
