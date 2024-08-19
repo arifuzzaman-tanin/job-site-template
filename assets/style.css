@@ -149,7 +149,8 @@ body {
     }
 
     .brand-logo-sm{
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 }
 
