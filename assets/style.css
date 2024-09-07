@@ -342,3 +342,33 @@ body {
 .dropdown-toggle-apps::after {
     display: none;
 }
+
+.bg-dark-white {
+    background-color: #e5e5e5;
+}
+
+.block-menu-item {
+    border: 1px solid #e5e5e5;
+    border-radius: 0px;
+}
+
+.block-menu-item .block-menu-item-text {
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.job-card {
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.job-card .skill-tag {
+    background-color: #D3F2E4;
+    color: #3498db;
+}
