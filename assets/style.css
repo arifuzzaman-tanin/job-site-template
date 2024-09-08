@@ -152,6 +152,10 @@ body {
         display: flex;
         justify-content: center;
     }
+
+    .pagination-sm{
+        margin-bottom: 100px;
+    }
 }
 
 /* Table Styles */
