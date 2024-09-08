@@ -23,16 +23,16 @@
     <nav class="navbar navbar-expand-lg navbar-light top-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo">
+                <img src="./assets/brand-logo-5.png" onclick="redirectTo('index.html')" class="brand-logo" alt="Brand Logo">
             </a>
             <ul class="navbar-nav ms-auto flex-row">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="index.html">
                         <span class="material-symbols-outlined">home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.html">
                         <span class="material-symbols-outlined">search</span>
                     </a>
                 </li>
@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="my-dashboard.html">
                         <span class="material-symbols-outlined">account_circle</span>
                     </a>
                 </li>
@@ -84,32 +84,32 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-lg btn-primary adjust-height rounded-0 w-100">Search</button>
+                <button class="btn btn-lg btn-primary adjust-height w-100">Search</button>
             </div>
         </div>
     </div>
 
-    <div class="container py-4 mb-0 pb-0">
-        <ul class="ul-remove-bullets">
-            <li class="ul-display-inline">
-                <p>428 JOBS FOUND</p>
+    <div class="container py-4 mb-4">
+        <ul class="d-flex list-unstyled align-items-center">
+            <li>
+                <p class="fs-5 fw-bold mb-0">428 JOBS FOUND</p>
             </li>
-            <li class="ul-display-inline">
-
-                <p class="ms-2">
-                    <span class="material-symbols-outlined inline-icon">
+            <li class="ms-3">
+                <p class="mb-0">
+                    <span class="material-symbols-outlined align-middle">
                         filter_alt
                     </span>
-                    Best matches
+                    <span class="fs-6">Best matches</span>
                 </p>
             </li>
         </ul>
     </div>
+    
 
     <div class="container mt-3">
         <div class="row">
             <div class="col-sm-5">
-                <div class="mb-4 job-card">
+                <div class="mb-4 job-card" onclick="redirectTo('details.html')">
                     <div class="row">
                         <div class="col-4">
                             <p class="text-muted small">
@@ -188,7 +188,165 @@
                     </div>
                 </div>
 
-                <div class="mb-4 job-card">
+                <div class="mb-4 job-card active-card" onclick="redirectTo('details.html')">
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-muted small">
+                                sponsored
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <p class="fs-6 fw-bold">CAD 100K to 150K / Y</p>
+                        </div>
+                    </div>
+                    <p class="job-title-cyan-blue">Senior Software Engineer</p>
+                    <ul class="ul-remove-bullets">
+                        <li class="ul-display-inline">
+                            <p>
+                                <span class="material-symbols-outlined inline-icon">
+                                    work
+                                </span>
+                                <span>Full-time</span>, <span>Part-time</span>
+                            </p>
+                        </li>
+                        <li class="ul-display-inline">
+                            <p class="mb-0">
+                                <span class="material-symbols-outlined inline-icon me-2">
+                                    location_on
+                                </span>
+                                <span>USA</span>, <span>GA</span>, <span>Atlanta</span>
+                            </p>
+                        </li>
+                        <li class="ul-display-inline">
+                            <p>
+                                <span class="material-symbols-outlined inline-icon">
+                                    schedule
+                                </span>
+                                Min. 5 year/s experienced
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            C#
+                        </span>
+
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            .NET Core
+                        </span>
+
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            .JavaScript
+                        </span>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-10">
+                            <p class="text-muted mb-0 pb-0">
+                                <span class="material-symbols-outlined inline-icon text-primary">
+                                    verified
+                                </span>
+                                RBC posted 2 days ago
+                            </p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end">
+                            <span class="material-symbols-outlined inline-icon fs-2">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4 job-card" onclick="redirectTo('details.html')">
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-muted small">
+                                sponsored
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <p class="fs-6 fw-bold">CAD 100K to 150K / Y</p>
+                        </div>
+                    </div>
+                    <p class="job-title-cyan-blue">Senior Software Engineer</p>
+                    <ul class="ul-remove-bullets">
+                        <li class="ul-display-inline">
+                            <p>
+                                <span class="material-symbols-outlined inline-icon">
+                                    work
+                                </span>
+                                <span>Full-time</span>, <span>Part-time</span>
+                            </p>
+                        </li>
+                        <li class="ul-display-inline">
+                            <p class="mb-0">
+                                <span class="material-symbols-outlined inline-icon me-2">
+                                    location_on
+                                </span>
+                                <span>USA</span>, <span>GA</span>, <span>Atlanta</span>
+                            </p>
+                        </li>
+                        <li class="ul-display-inline">
+                            <p>
+                                <span class="material-symbols-outlined inline-icon">
+                                    schedule
+                                </span>
+                                Min. 5 year/s experienced
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            C#
+                        </span>
+
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            .NET Core
+                        </span>
+
+                        <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                            <span class="material-symbols-outlined me-2">
+                                check
+                            </span>
+                            .JavaScript
+                        </span>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-10">
+                            <p class="text-muted mb-0 pb-0">
+                                <span class="material-symbols-outlined inline-icon text-primary">
+                                    verified
+                                </span>
+                                RBC posted 2 days ago
+                            </p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end">
+                            <span class="material-symbols-outlined inline-icon fs-2">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4 job-card" onclick="redirectTo('details.html')">
                     <div class="d-flex justify-content-end">
                         <p class="fs-6 fw-bold">USD 50 / H</p>
                     </div>
@@ -278,62 +436,86 @@
                         </span>
                     </div>
                     <div class="">
-                        <p class="fw-bold fs-5">Senior Software Engineer</p>
-                        <ul class="ul-remove-bullets">
-                            <li class="ul-display-inline">
-                                <p>
-                                    <span class="material-symbols-outlined inline-icon">
-                                        work
+                        <div class="job-card">
+                            <p class="fs-6 fw-bold">CAD 100K to 150K / Y</p>
+                            <p class="job-title-cyan-blue">Senior Software Engineer</p>
+                            <ul class="ul-remove-bullets">
+                                <li class="ul-display-inline">
+                                    <p>
+                                        <span class="material-symbols-outlined inline-icon">
+                                            work
+                                        </span>
+                                        <span>Full-time</span>, <span>Part-time</span>
+                                    </p>
+                                </li>
+                                <li class="ul-display-inline">
+                                    <p class="mb-0">
+                                        <span class="material-symbols-outlined inline-icon me-2">
+                                            location_on
+                                        </span>
+                                        <span>USA</span>, <span>GA</span>, <span>Atlanta</span>
+                                    </p>
+                                </li>
+                                <li class="ul-display-inline">
+                                    <p>
+                                        <span class="material-symbols-outlined inline-icon">
+                                            schedule
+                                        </span>
+                                        Min. 5 year/s experienced
+                                    </p>
+                                </li>
+                            </ul>
+        
+                            <div>
+                                <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                    <span class="material-symbols-outlined me-2">
+                                        check
                                     </span>
-                                    <span>Full-time</span>, <span>Part-time</span>
-                                </p>
-                            </li>
-                            <li class="ul-display-inline">
-                                <p class="mb-0">
-                                    <span class="material-symbols-outlined inline-icon me-2">
-                                        location_on
+                                    C#
+                                </span>
+        
+                                <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                    <span class="material-symbols-outlined me-2">
+                                        check
                                     </span>
-                                    <span>USA</span>, <span>GA</span>, <span>Atlanta</span>
-                                </p>
-                            </li>
-                            <li class="ul-display-inline">
-                                <p>
-                                    <span class="material-symbols-outlined inline-icon">
-                                        schedule
+                                    .NET Core
+                                </span>
+        
+                                <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                    <span class="material-symbols-outlined me-2">
+                                        check
                                     </span>
-                                    Min. 5 year/s experienced
-                                </p>
-                            </li>
-                            <li class="ul-display-inline">
-                                <p>
-                                    <span class="material-symbols-outlined inline-icon">
-                                        paid
-                                    </span>
-                                    100K to 150K / Y
-                                </p>
-                            </li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p class="text-muted mb-0 pb-0">
-                                    <span class="material-symbols-outlined inline-icon text-primary">
-                                        verified
-                                    </span>
-                                    RBC posted 2 days ago
-                                </p>
+                                    .JavaScript
+                                </span>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <button class="btn border-0 rounded-0 float-end w-100">
-                                            <span class="material-symbols-outlined inline-icon">
-                                                report
-                                            </span>
-                                            REPORT JOB
-                                        </button>
-                                    </div>
-                                    <div class="col-6">
-                                        <button class="btn btn-outline-dark rounded-0 float-end w-100">Apply</button>
+        
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <p class="text-muted mb-0 pb-0 mt-3">
+                                        <span class="material-symbols-outlined inline-icon text-primary">
+                                            verified
+                                        </span>
+                                        RBC posted 2 days ago
+                                    </p>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-danger rounded-pill float-end w-100">
+                                                <span class="material-symbols-outlined inline-icon">
+                                                    report
+                                                </span>
+                                                REPORT JOB
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-dark rounded-pill float-end w-100">
+                                                <span class="material-symbols-outlined inline-icon">
+                                                    electric_bolt
+                                                </span>
+                                                Easy Apply
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +563,7 @@
                                 market.
                             </p>
                             <p class="mt-5 fw-bold">About You</p>
-                            <p>
+                            <p class="mb-5">
                                 Are you a passionate and driven program manager looking for a unique opportunity to make
                                 a
                                 significant impact? We are looking for an experienced technical senior program manager
@@ -434,13 +616,13 @@
         <div class="container">
             <ul class="navbar-nav flex-row w-100">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="index.html">
                         <span class="material-symbols-outlined">home</span>
                         <span class="d-none d-sm-block">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.html">
                         <span class="material-symbols-outlined">search</span>
                         <span class="d-none d-sm-block">Search</span>
                     </a>
@@ -452,7 +634,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="my-dashboard.html">
                         <span class="material-symbols-outlined">account_circle</span>
                         <span class="d-none d-sm-block">Profile</span>
                     </a>
@@ -464,6 +646,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 
 </html>
