@@ -19,97 +19,110 @@
 </head>
 
 <body>
-    <div class="container-fluid py-2">
-        <div class="row">
-            <div class="col-6">
-                <a href="#"><img src="./assets/brand-logo-5.png" class="brand-logo"
-                        alt="Brand Logo"></a>
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-apps float-end rounded-circle d-flex align-items-center justify-content-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Apps menu">
-                        <span class="material-symbols-outlined">apps</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">account_circle</span>User Management
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">work</span>Job Management
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <span class="material-symbols-outlined me-2 fw-bold text-cyan-blue fs-1">bar_chart_4_bars</span>Application Management
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-
     <div class="container-fluid py-3">
         <div class="row">
             <div class="col-md-3 mb-3">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <p class="fw-bold fs-5 mb-1">User Management</p>
-                        <p class="text-muted small">Overview and insights on all registered users.</p>
+                <div class="p-3 bg-dark-white rounded shadow-sm d-flex flex-column">
+                    <div class="bg-white p-4 rounded d-flex flex-column flex-grow-1">
+                        <div class="text-center mb-3">
+                            <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo"></a>
+                        </div>
+                        <div class="mb-4">
+                            <div class="dropdown">
+                                <!-- Centered text inside the button with flexbox -->
+                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="custom-dropdown-content">
+                                        <div class="custom-dropdown-header-title">User Management</div>
+                                        <div class="custom-dropdown-header-subtitle">User Overview and Insights</div>
+                                    </div>
+                                    <i class="bi bi-caret-down-fill"></i> 
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all posted.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Analytics</div>
+                                        <div class="custom-dropdown-header-subtitle">Job posting and application analysis.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Candidate Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate progress.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-success">
+                                            add_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Add a user</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-info">
+                                            view_cozy
+                                        </span>
+                                        <p class="block-menu-item-text">All User</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-warning">
+                                            drafts
+                                        </span>
+                                        <p class="block-menu-item-text">Drafted</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-primary">
+                                            account_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Profile</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-secondary">
+                                            settings_applications
+                                        </span>
+                                        <p class="block-menu-item-text">Settings</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-danger">
+                                            power_settings_new
+                                        </span>
+                                        <p class="block-menu-item-text">Sign Out</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <ul class="list-group mt-3">
-                    <li class="list-group-item cursor-pointer d-flex justify-content-between align-items-start py-3">
-                        <div class="d-flex align-items-center">
-                            <span class="material-symbols-outlined inline-icon me-2">
-                                add
-                            </span>
-                            <div>
-                                <div class="fw-bold">Add New User</div>
-                                <small class="text-muted">Register a new user in the system</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li
-                        class="list-group-item active-side-menu cursor-pointer d-flex justify-content-between align-items-start py-3">
-                        <div class="d-flex align-items-center">
-                            <span class="material-symbols-outlined inline-icon me-2">
-                                list
-                            </span>
-                            <div>
-                                <div class="fw-bold">View All Users</div>
-                                <small class="text-muted">See all registered users</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item cursor-pointer d-flex justify-content-between align-items-start py-3">
-                        <div class="d-flex align-items-center">
-                            <span class="material-symbols-outlined inline-icon me-2">
-                                admin_panel_settings
-                            </span>
-                            <div>
-                                <div class="fw-bold">Manage User Roles</div>
-                                <small class="text-muted">Assign roles to users</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item cursor-pointer d-flex justify-content-between align-items-start py-3">
-                        <div class="d-flex align-items-center">
-                            <span class="material-symbols-outlined inline-icon me-2">
-                                shield_person
-                            </span>
-                            <div>
-                                <div class="fw-bold">Set User Permissions</div>
-                                <small class="text-muted">Define user permissions</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
             </div>
 
             <div class="col-md-9">
@@ -144,6 +157,113 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mb-4 job-card mt-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="text-muted small">
+                                Premium user
+                            </p>
+                        </div>
+                        <div class="col-8 d-flex justify-content-end">
+                            <p class="fs-6 fw-bold">CAD 100K to 150K / Y</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-7">
+                            <p class="job-title-cyan-blue">Arifuzzaman Tanin</p>
+                            <ul class="ul-remove-bullets">
+                                <li class="ul-display-inline">
+                                    <p>
+                                        <span class="material-symbols-outlined inline-icon">
+                                            work
+                                        </span>
+                                        <span>Full-time</span>, <span>Part-time</span>
+                                    </p>
+                                </li>
+                                <li class="ul-display-inline">
+                                    <p class="mb-0">
+                                        <span class="material-symbols-outlined inline-icon me-2">
+                                            location_on
+                                        </span>
+                                        <span>USA</span>, <span>GA</span>, <span>Atlanta</span>
+                                    </p>
+                                </li>
+                                <li class="ul-display-inline">
+                                    <p>
+                                        <span class="material-symbols-outlined inline-icon">
+                                            schedule
+                                        </span>
+                                        Min. 5 year/s experienced
+                                    </p>
+                                </li>
+                            </ul>
+                            <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                <span class="material-symbols-outlined me-2">
+                                    check
+                                </span>
+                                C#
+                            </span>
+
+                            <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                <span class="material-symbols-outlined me-2">
+                                    check
+                                </span>
+                                .NET Core
+                            </span>
+
+                            <span class="badge skill-tag fw-bold d-inline-flex align-items-center pe-3">
+                                <span class="material-symbols-outlined me-2">
+                                    check
+                                </span>
+                                .JavaScript
+                            </span>
+
+                            <p class="mt-2 text-muted mb-0 pb-0">
+                                <span class="material-symbols-outlined inline-icon">
+                                    email
+                                </span>
+                                arifuzzaman.tanin@outlook.com
+                            </p>
+                            <p class="mt-2 text-muted mb-0 pb-0">
+                                <span class="material-symbols-outlined inline-icon">
+                                    phone
+                                </span>
+                                +1 (437) 460-9212
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 rounded-3">
+                                    <div class="me-auto">
+                                        <div class="fw-bold text-primary">Academic Qualifications</div>
+                                        Bachelor | Masters | P.hd
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill me-1">Y</span>
+                                    <span class="badge bg-primary rounded-pill me-1">N</span>
+                                    <span class="badge bg-primary rounded-pill">N</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 rounded-3">
+                                    <div class="me-auto">
+                                        <div class="fw-bold text-primary">Certifications</div>
+                                        Professional certification
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light border-0 rounded-3">
+                                    <div class="me-auto">
+                                        <div class="fw-bold text-primary">Quick Actions</div>
+                                        Total contacted
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
                 <div class="table-responsive mt-3">
                     <table class="styled-table">
                         <thead>

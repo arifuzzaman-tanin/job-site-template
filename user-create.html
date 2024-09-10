@@ -19,100 +19,110 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./assets/brand-logo-5.png" class="brand-logo"
-                    alt="Brand Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto nav-underline">
-                    <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="#">User Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark " href="#">Admin Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark " href="#">Job Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark " href="#">Application Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark " href="#">Communication</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://avatars.githubusercontent.com/u/108493476?v=4" alt="Profile"
-                                class="profile-icon">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="container-fluid py-3">
         <div class="row">
             <div class="col-md-3 mb-3">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <p class="fw-bold fs-5 mb-1">User Management</p>
-                        <p class="text-muted small">Overview and insights on all registered users.</p>
+                <div class="p-3 bg-dark-white rounded shadow-sm d-flex flex-column">
+                    <div class="bg-white p-4 rounded d-flex flex-column flex-grow-1">
+                        <div class="text-center mb-3">
+                            <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo"></a>
+                        </div>
+                        <div class="mb-4">
+                            <div class="dropdown">
+                                <!-- Centered text inside the button with flexbox -->
+                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="custom-dropdown-content">
+                                        <div class="custom-dropdown-header-title">User Management</div>
+                                        <div class="custom-dropdown-header-subtitle">User Overview and Insights</div>
+                                    </div>
+                                    <i class="bi bi-caret-down-fill"></i> 
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all posted.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Analytics</div>
+                                        <div class="custom-dropdown-header-subtitle">Job posting and application analysis.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Candidate Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate progress.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-success">
+                                            add_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Add a user</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-info">
+                                            view_cozy
+                                        </span>
+                                        <p class="block-menu-item-text">All User</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-warning">
+                                            drafts
+                                        </span>
+                                        <p class="block-menu-item-text">Drafted</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-primary">
+                                            account_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Profile</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-secondary">
+                                            settings_applications
+                                        </span>
+                                        <p class="block-menu-item-text">Settings</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-danger">
+                                            power_settings_new
+                                        </span>
+                                        <p class="block-menu-item-text">Sign Out</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <ul class="list-group">
-                    <li class="list-group-item active-side-menu cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
-                                add
-                            </span>
-                            Add New User
-                        </div>
-                        Register a new user in the system
-                    </li>
-                    <li class="list-group-item cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
-                                list
-                            </span>
-                            View All Users
-                        </div>
-                        See all registered users
-                    </li>
-                    <li class="list-group-item cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
-                                admin_panel_settings
-                            </span>
-                            Manage User Roles
-                        </div>
-                        Assign roles to users
-                    </li>
-                    <li class="list-group-item cursor-pointer">
-                        <div class="fw-bold">
-                            <span class="material-symbols-outlined inline-icon">
-                                shield_person
-                            </span>
-                            Set User Permissions
-                        </div>
-                        Define user permissions
-                    </li>
-                </ul>
             </div>
 
             <div class="col-md-9">
