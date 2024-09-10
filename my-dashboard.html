@@ -27,9 +27,31 @@
                         <div class="text-center mb-3">
                             <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo"></a>
                         </div>
-                        <div class="text-center mb-4">
-                            <p class="fw-bold fs-5 mb-1">Job Management</p>
-                            <p class="text-muted small">Overview and insights on all posted jobs.</p>
+                        <div class="mb-4">
+                            <div class="dropdown">
+                                <!-- Centered text inside the button with flexbox -->
+                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="custom-dropdown-content">
+                                        <div class="custom-dropdown-header-title">Job Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Job Overview and Insights</div>
+                                    </div>
+                                    <i class="bi bi-caret-down-fill"></i> <!-- Bootstrap icon for dropdown arrow -->
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all posted.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Analytics</div>
+                                        <div class="custom-dropdown-header-subtitle">Job posting and application analysis.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Candidate Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate progress.</div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="row g-3">

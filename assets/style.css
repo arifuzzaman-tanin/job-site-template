@@ -354,6 +354,10 @@ body {
 .block-menu-item {
     border: 1px solid #e5e5e5;
     border-radius: 0px;
+    cursor: pointer;
+}
+.block-menu-item :hover{
+    background-color: #f8f9fa;
 }
 
 .block-menu-item .block-menu-item-text {
@@ -375,4 +379,61 @@ body {
 .job-card .skill-tag {
     background-color: #D3F2E4;
     color: #3498db;
+}
+
+/* dashboard menu ddl */
+.custom-select-dropdown {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.custom-select-dropdown:hover {
+    border-color: #3498db;
+}
+
+.custom-dropdown-header-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.custom-dropdown-header-subtitle {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.custom-dropdown-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.custom-dropdown-menu {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+
+.custom-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.custom-dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-dropdown-toggle::after {
+    margin-left: auto;
 }
