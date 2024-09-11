@@ -16,39 +16,213 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
 
     <link rel="stylesheet" href="./assets/style.css">
+    <style>
+        /* Disable body scrolling */
+        body {
+            overflow: hidden;
+        }
+
+        /* Enable scroll for the specific div */
+        .scrollable-div {
+            width: 100%;
+            height: 85vh;
+            overflow-y: scroll;
+        }
+
+        .menu-lg {
+            display: block;
+        }
+
+        .menu-sm {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            body {
+                overflow-y: scroll;
+                /* Enable scrolling for the body */
+            }
+
+            .scrollable-div {
+                width: 100%;
+                height: auto;
+                /* Adjust as needed */
+                overflow-y: hidden;
+            }
+
+            .menu-lg {
+                display: none;
+            }
+
+            .menu-sm {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-fluid py-3">
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <div class="p-3 bg-dark-white rounded shadow-sm d-flex flex-column">
-                    <div class="bg-white p-4 rounded d-flex flex-column flex-grow-1">
+    <div class="container d-flex justify-content-end menu-sm">
+        <button class="btn menu-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
+            <span class="material-symbols-outlined inline-icon fs-1 fw-bold">
+                menu
+            </span>
+        </button>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div style="width: 100%;
+            height: 100%;
+            overflow-y: scroll;">
+                <div class="p-2 bg-dark-white rounded shadow-sm d-flex flex-column">
+                    <div class="bg-white p-2 rounded d-flex flex-column flex-grow-1">
                         <div class="text-center mb-3">
-                            <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo" alt="Brand Logo"></a>
+                            <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo"
+                                    alt="Brand Logo"></a>
                         </div>
                         <div class="mb-4">
                             <div class="dropdown">
                                 <!-- Centered text inside the button with flexbox -->
-                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     <div class="custom-dropdown-content">
                                         <div class="custom-dropdown-header-title">User Management</div>
                                         <div class="custom-dropdown-header-subtitle">User Overview and Insights</div>
                                     </div>
-                                    <i class="bi bi-caret-down-fill"></i> 
+                                    <i class="bi bi-caret-down-fill"></i>
                                 </button>
                                 <ul class="dropdown-menu custom-dropdown-menu">
                                     <li class="dropdown-item custom-dropdown-item">
                                         <div class="custom-dropdown-header-title">Job Management</div>
-                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all posted.</div>
+                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all
+                                            posted.</div>
                                     </li>
                                     <li class="dropdown-item custom-dropdown-item">
                                         <div class="custom-dropdown-header-title">Job Analytics</div>
-                                        <div class="custom-dropdown-header-subtitle">Job posting and application analysis.</div>
+                                        <div class="custom-dropdown-header-subtitle">Job posting and application
+                                            analysis.</div>
                                     </li>
                                     <li class="dropdown-item custom-dropdown-item">
                                         <div class="custom-dropdown-header-title">Candidate Management</div>
-                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate progress.</div>
+                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate
+                                            progress.</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-success">
+                                            add_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Add a user</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-info">
+                                            view_cozy
+                                        </span>
+                                        <p class="block-menu-item-text">All User</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-warning">
+                                            drafts
+                                        </span>
+                                        <p class="block-menu-item-text">Drafted</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-primary">
+                                            account_circle
+                                        </span>
+                                        <p class="block-menu-item-text">Profile</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-secondary">
+                                            settings_applications
+                                        </span>
+                                        <p class="block-menu-item-text">Settings</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card block-menu-item">
+                                    <div class="card-body text-center">
+                                        <span class="material-symbols-outlined inline-icon fs-1 text-danger">
+                                            power_settings_new
+                                        </span>
+                                        <p class="block-menu-item-text">Sign Out</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-3">
+        <div class="row">
+            <div class="col-md-3 mb-3 menu-lg">
+                <div class="p-3 bg-dark-white rounded shadow-sm d-flex flex-column">
+                    <div class="bg-white p-4 rounded d-flex flex-column flex-grow-1">
+                        <div class="text-center mb-3">
+                            <a href="index.html"><img src="./assets/brand-logo-5.png" class="brand-logo"
+                                    alt="Brand Logo"></a>
+                        </div>
+                        <div class="mb-4">
+                            <div class="dropdown">
+                                <!-- Centered text inside the button with flexbox -->
+                                <button class="custom-select-dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <div class="custom-dropdown-content">
+                                        <div class="custom-dropdown-header-title">User Management</div>
+                                        <div class="custom-dropdown-header-subtitle">User Overview and Insights</div>
+                                    </div>
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown-menu">
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Overview and insights on all
+                                            posted.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Job Analytics</div>
+                                        <div class="custom-dropdown-header-subtitle">Job posting and application
+                                            analysis.</div>
+                                    </li>
+                                    <li class="dropdown-item custom-dropdown-item">
+                                        <div class="custom-dropdown-header-title">Candidate Management</div>
+                                        <div class="custom-dropdown-header-subtitle">Manage and track candidate
+                                            progress.</div>
                                     </li>
                                 </ul>
                             </div>
@@ -126,50 +300,133 @@
             </div>
 
             <div class="col-md-9">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-light border-bottom-0">
                         <p class="fw-bold fs-5 mb-1">Create a new user</p>
                         <p class="text-muted small">Add and configure new user profiles.</p>
                     </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control x-input" id="floatingInputEmail"
-                                        placeholder="name@example.com">
-                                    <label for="floatingInputEmail">Email address</label>
+                    <div class="card-body bg-white rounded  d-flex justify-content-center scrollable-div">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-md-12">
+                                    <p class="fw-bold">Account</p>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control x-input" id="floatingInputName"
+                                            placeholder="Enter full name">
+                                        <label for="floatingInputName">Full Name</label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control x-input" id="floatingInputName" placeholder="name">
-                                    <label for="floatingInputName">Enter Name</label>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control x-input" id="floatingInputEmail"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInputEmail">Email address</label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <select class="form-select x-input" id="select-role"
-                                        aria-label="Floating label select example">
-                                        <option selected>--</option>
-                                        <option value="Admin">Admin</option>
-                                        <option value="User">User</option>
-                                        <option value="Guest">Guest</option>
-                                    </select>
-                                    <label for="select-role">Select Role</label>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="phone" class="form-control x-input" id="floatingInputEmail"
+                                            placeholder="">
+                                        <label for="floatingInputEmail">Contact number</label>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="col-md-4">
-                                <div class="form-floating">
-                                    <select class="form-select x-input" id="select-status"
-                                        aria-label="Floating label select example">
-                                        <option selected>--</option>
-                                        <option value="Active">Active</option>
-                                        <option value="Inactive">Inactive</option>
-                                    </select>
-                                    <label for="select-status">Select Status</label>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select x-input" id="select-role"
+                                            aria-label="Floating label select example">
+                                            <option selected>--</option>
+                                            <option value="Admin">Admin</option>
+                                            <option value="User">User</option>
+                                            <option value="Guest">Guest</option>
+                                        </select>
+                                        <label for="select-role">Select Role</label>
+                                    </div>
+                                </div>
+                                <!-- Status Selection -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select x-input" id="select-status"
+                                            aria-label="Floating label select example">
+                                            <option selected>--</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                        </select>
+                                        <label for="select-status">Select Status</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <p class="fw-bold">Date of Birth</p>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <select class="form-select x-input" id="select-status"
+                                                    aria-label="Floating label select example">
+                                                    <option selected value="1">01</option>
+                                                    <option value="2">02</option>
+                                                    <option value="3">03</option>
+                                                </select>
+                                                <label for="select-status">DD</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <select class="form-select x-input" id="select-status"
+                                                    aria-label="Floating label select example">
+                                                    <option selected value="1">01</option>
+                                                    <option value="2">02</option>
+                                                    <option value="3">03</option>
+                                                </select>
+                                                <label for="select-status">MM</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="form-floating">
+                                                <select class="form-select x-input" id="select-status"
+                                                    aria-label="Floating label select example">
+                                                    <option selected value="1">1994</option>
+                                                    <option value="2">1995</option>
+                                                    <option value="3">1996</option>
+                                                </select>
+                                                <label for="select-status">YYYY</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <p class="fw-bold">Gender</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">Other</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-sm-4">
+                                            <button class="btn btn-primary w-100">
+                                                <span class="material-symbols-outlined inline-icon text-while">
+                                                    check_circle
+                                                </span>
+                                                Save User Profile
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
